@@ -1,4 +1,4 @@
-package com.pql.leetcode.offer.code70;
+package com.pql.leetcode.offer2.code70;
 
 /**
  * leetCode 剑指offer 2 070 题 排序数组中只出现一次的数字
