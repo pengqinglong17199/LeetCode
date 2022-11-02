@@ -1,4 +1,4 @@
-package com.pql.leetcode.offer.code24;
+package com.pql.offer.code24;
 
 public class ListNode {
 

@@ -1,4 +1,4 @@
-package com.pql.leetcode.offer.code18;
+package com.pql.offer.code18;
 
 public class ListNode {
     int val;

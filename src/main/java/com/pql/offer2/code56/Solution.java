@@ -1,4 +1,4 @@
-package com.pql.leetcode.offer2.code56;
+package com.pql.offer2.code56;
 
 /**
  * leetCode 剑指offer 2 56 题 数组汇总数字出现的次数2

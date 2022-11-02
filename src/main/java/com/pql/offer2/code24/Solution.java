@@ -1,4 +1,4 @@
-package com.pql.leetcode.offer2.code24;
+package com.pql.offer2.code24;
 
 /**
  * @author pengqinglong
