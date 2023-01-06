@@ -42,6 +42,9 @@ public class BiggerThanRightTwice {
         int biggerThanRight = 0;
         int windowR = mid +1;
         for (int j = left; j <= mid; j++) {
+            while (windowR <= right && arr[j] > arr[windowR] << 1){
+                windowR++;
+            }
             for (int k = windowR; k <= right; k++) {
                 if(windowR <= right && arr[j] > arr[k] << 1){
                     windowR++;
@@ -70,3 +73,11 @@ public class BiggerThanRightTwice {
         return biggerThanRight;
     }
 }
+
+
+
+
+
+
+
+
