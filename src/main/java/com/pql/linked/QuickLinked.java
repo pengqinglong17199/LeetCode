@@ -9,4 +9,66 @@ package com.pql.linked;
  */
 public class QuickLinked {
 
+    public static void main(String[] args) {
+        Node node = new Node(9);
+        node.next = new Node(8);
+        node.next.next = new Node(7);
+        node.next.next.next = new Node(6);
+        node.next.next.next.next = new Node(5);
+        node.next.next.next.next.next = new Node(4);
+        node.next.next.next.next.next.next = new Node(3);
+        node.next.next.next.next.next.next.next = new Node(2);
+        node.next.next.next.next.next.next.next.next = new Node(1);
+
+        QuickLinked quickLinked = new QuickLinked();
+        quickLinked.mergeNode(node, 5);
+        System.out.println();
+    }
+    public Node mergeNode(Node head, int k){
+        Node sh = null;
+        Node st = null;
+        Node mh = null;
+        Node mt = null;
+        Node bh = null;
+        Node bt = null;
+
+        while (head != null){
+            if (head.value < k) {
+                if(sh == null){
+                    sh = head;
+                    st = head;
+                }else{
+                    st.next = head;
+                    st = head;
+                }
+            } else if (head.value == k) {
+                if(mh == null){
+                    mh = head;
+                    mt = head;
+                }else{
+                    mt.next = head;
+                    mt = head;
+                }
+            } else {
+                if(bh == null){
+                    bh = head;
+                    bt = head;
+                }else{
+                    bt.next = head;
+                    bt = head;
+                }
+            }
+            head = head.next;
+        }
+
+        if(sh != null){
+            st.next = mh;
+            mh = mh == null ? sh : mh;
+        }
+
+        if(mh != null){
+            mt.next = bh;
+        }
+        return mh;
+    }
 }
