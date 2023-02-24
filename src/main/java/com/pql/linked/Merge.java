@@ -27,6 +27,10 @@ public class Merge {
         System.out.println();
 
     }
+
+    /**
+     * 大致思路 先通过快慢指针找到链表中点 偶数拿到上中点 然后把链表变成这样 1>2>3<4<5 抓到头和尾 然后 1>5>2>4>3 注意好结束的时候的边界条件
+     */
     public Node mergeLinked(Node head){
         Node result = head;
 
